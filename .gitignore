@@ -1,3 +1,5 @@
 /env/
 /parte_antiga/
 /functions/
+.streamlit
+main.py
