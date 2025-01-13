@@ -44,5 +44,80 @@
 
 link: https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification
 
+---
+
+## **2. Análise Exploratória de dados**
+
+### **2.1. Contexto:**
+- Temos dois arquivos no formato csv (train e test), que possuem características referentes a dispositivos móveis, como:
+  - Dimensões físicas
+  - Características de hardware
+  - Suporte a tecnologias
+  - Fatores ligados a um celular, de modo geral.
+- Com isso, a missão é, após esses dados terem sido coletados, analisar as features de maiores pesos, explorar à fundo e criar um modelo capaz de prever uma classe de preços, se tornando um problema de classificação. Seria um problema de regressão se fosse para prever o preço final, por exemplo.
+
+### **2.2 Analisando features numéricas contínuas:**
+
+#### **2.2.1. Battery Power**
+
+<img src="images/eda_batterypower.png" alt="bateria" width="1100"/>
+
+Como podemos ver, há uma tendência de crescimento nos valores da feature "battery_power". Podemos notar isso olhando as medianas por exemplo (linha central da caixa), na classe 0 ela beira o valor de 1100, já na classe 3 ela beira 1400. Porém, devemos ter cuidado, pois como mostra o gráfico de caixa, independente da classe, os valores podem ser altos ou baixos. Mas, há sim uma leve correlação positiva.
+
+#### **2.2.2. Memória interna**
+
+<img src="images/eda_memoriainterna.png" alt="memoria" width="1100"/>
+
+Analisando esses gráficos, podemos dizer que dentro dessa amostra coletada, não há grandes diferenças, como podemos ver nos gráficos de caixa, inclusive os quartis se assemelham bastante.
+
+#### **2.2.3. Memória RAM**
+
+<img src="images/eda_ram.png" alt="ram" width="1100"/>
+
+Aqui temos um exemplo muito claro de correlação altamente positiva. Como podemos ver, não só as medianas, mas também os outros quartis se diferen muito conforme a classe de preços muda. Ou seja, essa feature possui um peso extremamente considerável na classe-alvo.
+
+- Analisando o gráfico acima, podemos dizer que:
+  - A classe 0 concentra valores de RAM entre 500 e 1000
+  - A classe 1 concentra valores de RAM entre 1400 e 2000
+  - A classe 2 concentra valores de RAM entre 2200 e 3000
+  - A classe 3 concentra valores de RAM acima de 3200
+ 
+Obviamanete há exceções, pois vários outros fatores são levados em conta no preço final.
+
+---
+
+### **2.3. Analisando features categóricas binárias**
+
+#### **2.3.1. 4G**
+
+<img src="images/eda_4g.png" alt="4g" width="1100"/>
+
+Conseguimos ver algumas diferenças conforme as classes mudam. Há um comportamento interessante, no mínimo curioso nesses dados:
+- Há mais celulares com 4G na classe 0 do que na classe 1 e 2.
+
+
+
+#### **2.3.2. Bluetooth**
+
+<img src="images/eda_bluetooth.png" alt="bluetooth" width="1100"/>
+
+- As classes estão equilibradas de modo geral
+- A classe 3 possui mais celulares com bluetooth
+
+
+### 3. Modelo de Machine Learning
+
+continua..
+
+### 4. Criando App streamlit
+
+<img src="streamlit/01_imagem_inicial_app.png" alt="inicio" width="800"/>
+
+<img src="streamlit/02_imagem_prever.png" alt="prever" width="800"/>
+
+continua...
+
+
+
 
 
