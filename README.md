@@ -1,4 +1,4 @@
-# **Projeto de Classificação - Classificação de preços de celulares**
+# **Projeto de Classificação - Classes de preços de celulares**
 
 ---------------------
 
@@ -21,6 +21,8 @@
   - Imagens geradas nas análises de EDA
 - notebooks
   - Arquivos .ipynb (cadernos Jupyter), onde o projeto foi feito
+- models
+  - Pipeline com o pré-processamento e o modelo
 - streamlit
   - Imagens relacionadas ao app streamlit
 - gitignore
