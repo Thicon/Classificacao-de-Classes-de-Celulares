@@ -42,5 +42,7 @@
 
 ### **1.4. Fonte das bases de dados**
 
+link: https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classification
 
-continua
+
+
