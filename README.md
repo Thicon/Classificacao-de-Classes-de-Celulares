@@ -5,12 +5,11 @@
 ## **1. Apresentação**
 
 ### **1.1. Possíveis problemas, questões e observações**
-- A classificação pode ser útil em diferentes cenários, pois é criada uma "target" que difrrencia dados com base em características
+- A classificação é útil em diferentes cenários, pois é criada uma "target" que diferencia dados com base em características/features
 - Neste cenário a classificação popde ser útil para:
-  - Possíveis recomendações após uma segmentação de clientes (com base em interesses, cliques, preferências...)
+  - Recomendações após uma segmentação de clientes (com base em interesses, cliques, preferências...)
   - Analisar as features mais influentes na classe-alvo (target).
   - Descobrir padrões ocultos nos dados e que influenciam de modo geral.
-  - Automações em recomendações.
 
 
 ### **1.2. Contexto das pastas e arquivos do repositório**
@@ -38,7 +37,7 @@
 | Apenas um notebook para todas as etapas (EDA e Machine Learning     |   Pastas e arquivos organizados de acordo com sua finalidade                                    |
 | Sem pipeline e exportação do modelo                                 |   Pipeline completo exportado com o joblib, para utilizar no Streamlit                          |
 | Interação apenas do notebook                                        |   App Streamlit para inserir as features e prever a classe do preço                             |
-| Sem a pasta "images" com os gráficos feitos                         |   Imagens dos gráficos disponibilizadas nas pastas "images" e "streamlit"                       |
+| Sem a pasta "images" com os gráficos                                |   Imagens dos gráficos disponibilizadas nas pastas "images" e "streamlit"                       |
 
 ### **1.4. Fonte das bases de dados**
 
@@ -53,8 +52,8 @@ link: https://www.kaggle.com/datasets/iabhishekofficial/mobile-price-classificat
   - Dimensões físicas
   - Características de hardware
   - Suporte a tecnologias
-  - Fatores ligados a um celular, de modo geral.
-- Com isso, a missão é, após esses dados terem sido coletados, analisar as features de maiores pesos, explorar à fundo e criar um modelo capaz de prever uma classe de preços, se tornando um problema de classificação. Seria um problema de regressão se fosse para prever o preço final, por exemplo.
+  - Fatores relacionados a celulares, de um modo geral.
+- Com isso, a missão é, após esses dados terem sido coletados, analisar as colunas de maiores pesos, explorar à fundo, e criar um modelo capaz de prever uma classe de preços, tornando-se um problema de classificação.
 
 ### **2.2 Analisando features numéricas contínuas:**
 
@@ -104,18 +103,33 @@ Conseguimos ver algumas diferenças conforme as classes mudam. Há um comportame
 - As classes estão equilibradas de modo geral
 - A classe 3 possui mais celulares com bluetooth
 
+---
 
-### 3. Modelo de Machine Learning
+### **3. Modelo de Machine Learning**
 
-continua..
+- Realizei normalização e padronização em algumas colunas
+- Criei um modelo de Regressão Logística
+- Fiz a validação cruzada
+- Juntei tudo isso em um pipeline
+- Visualizamos as probabilidades de escolha das classes com o predict_proba
 
-### 4. Criando App streamlit
+---
+
+### **4. Criando interface interativa com o Streamlit**
+
+
+#### **4.1. Inicio do app:**
 
 <img src="streamlit/01_imagem_inicial_app.png" alt="inicio" width="800"/>
 
+Contém campos referentes as features para a previsão do modelo
+
+#### **4.2. Previsão:**
+
 <img src="streamlit/02_imagem_prever.png" alt="prever" width="800"/>
 
-continua...
+No final da tela há o botão de previsão, que quando apertado, realiza a predição com os dados inseridos pelo usuário. Os campos preenchidos junto com a classe predita são enviados para um arquivo csv, junto com a data e hora do momento que a previsão foi feita
+
 
 
 
