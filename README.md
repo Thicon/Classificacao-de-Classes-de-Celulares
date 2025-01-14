@@ -6,7 +6,7 @@
 
 ### **1.1. Possíveis problemas, questões e observações**
 - A classificação é útil em diferentes cenários, pois é criada uma "target" que diferencia dados com base em características/features
-- Neste cenário a classificação popde ser útil para:
+- Neste cenário a classificação pode ser útil para:
   - Recomendações após uma segmentação de clientes (com base em interesses, cliques, preferências...)
   - Analisar as features mais influentes na classe-alvo (target).
   - Descobrir padrões ocultos nos dados e que influenciam de modo geral.
